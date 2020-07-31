@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "Unit.h"
 
 t_list	*heroes_list_create(void)
 {
 	t_list	*heroes;
 
-	heroes = ft_lstnew(NULL);
-	ft_lstadd_front(&heroes, ft_lstnew(NULL));
+	heroes = ft_lstnew();
+	ft_lstadd_front(&heroes, ft_lstnew());
 	ft_lstadd_front(&heroes, ft_lstnew(NULL));
 	return (heroes);
 }
