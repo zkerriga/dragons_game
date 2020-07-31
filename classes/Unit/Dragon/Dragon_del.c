@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Berserk.h                                          :+:      :+:    :+:   */
+/*   Dragon_del.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zkerriga <zkerriga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/31 10:29:34 by zkerriga          #+#    #+#             */
-/*   Updated: 2020/07/31 10:29:35 by zkerriga         ###   ########.fr       */
+/*   Created: 2020/07/31 11:28:28 by zkerriga          #+#    #+#             */
+/*   Updated: 2020/07/31 11:28:30 by zkerriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BERSERK_H
-# define BERSERK_H
+#include "Dragon.h"
 
-typedef struct	s_berserk
+void	dragon_del(t_dragon *self)
 {
-
-}				t_berserk;
-
-#endif
+	free(self);
+}
