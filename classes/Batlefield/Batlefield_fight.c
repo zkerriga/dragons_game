@@ -13,7 +13,7 @@
 #include "Batlefield.h"
 #include "stdio.h"
 
-void	battle(t_battlefield *self, int i1, int i2)
+static void	battle(t_battlefield *self, int i1, int i2)
 {
 	t_unit	*unit1;
 	t_unit	*unit2;
@@ -44,7 +44,7 @@ void	battle(t_battlefield *self, int i1, int i2)
 	}
 }
 
-void	find_units(t_battlefield *self, int *unit1, int *unit2)
+static void	find_units(t_battlefield *self, int *unit1, int *unit2)
 {
 	static int	unit0 = 0;
 	int			next_unit;
@@ -71,7 +71,7 @@ void	find_units(t_battlefield *self, int *unit1, int *unit2)
 	++unit0;
 }
 
-void	batlefield_fight(t_battlefield *self)
+void	battlefield_fight(t_battlefield *self)
 {
 	int		unit1;
 	int		unit2;

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Hero.h"
-#include "stdio.h"
+#include <stdio.h>
 
 const char	*hero_slogan(t_hero *self)
 {

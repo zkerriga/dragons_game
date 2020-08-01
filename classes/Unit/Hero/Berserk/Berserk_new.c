@@ -31,7 +31,7 @@ t_hero	*berserk_new(int fire, int water, int earth, int air, const char *name)
 		free_gc(NULL);
 		exit(1);
 	}
-	unit_normalize(berserk);
+	unit_normalize((t_unit *)berserk);
 	berserk->del = hero_del;
 	berserk->slogan = hero_slogan;
 	berserk->communicate = hero_communicate;

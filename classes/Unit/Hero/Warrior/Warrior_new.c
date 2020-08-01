@@ -31,7 +31,7 @@ t_hero	*warrior_new(int fire, int water, int earth, int air, const char *name)
 		free_gc(NULL);
 		exit(1);
 	}
-	unit_normalize(warrior);
+	unit_normalize((t_unit *)warrior);
 	warrior->del = hero_del;
 	warrior->slogan = hero_slogan;
 	warrior->communicate = hero_communicate;

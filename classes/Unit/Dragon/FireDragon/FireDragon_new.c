@@ -25,7 +25,7 @@ t_dragon	*firedragon_new(int fire, int water, int earth, int air)
 	firedragon->stats.water = water;
 	firedragon->stats.earth = earth;
 	firedragon->stats.air = air;
-	unit_normalize(firedragon);
+	unit_normalize((t_unit *)firedragon);
 	firedragon->del = dragon_del;
 	firedragon->slogan = dragon_slogan;
 	firedragon->communicate = dragon_communicate;

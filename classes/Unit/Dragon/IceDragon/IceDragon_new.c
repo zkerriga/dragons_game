@@ -25,7 +25,7 @@ t_dragon	*icedragon_new(int fire, int water, int earth, int air)
 	icedragon->stats.water = water;
 	icedragon->stats.earth = earth;
 	icedragon->stats.air = air;
-	unit_normalize(icedragon);
+	unit_normalize((t_unit *)icedragon);
 	icedragon->del = dragon_del;
 	icedragon->slogan = dragon_slogan;
 	icedragon->communicate = dragon_communicate;

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BATLEFIELD_H
-# define BATLEFIELD_H
+#ifndef BATTLEFIELD_H
+# define BATTLEFIELD_H
 
 # include "Unit.h"
 
