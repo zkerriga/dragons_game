@@ -14,14 +14,14 @@
 
 void	unit_normalize(t_unit *unit)
 {
-	int	sum;
-	int	diff;
+	int		sum;
+	float	diff;
 
 	sum = unit->stats.air + unit->stats.earth + unit->stats.fire
 			+ unit->stats.water;
-	diff = sum / 100;
-	unit->stats.air /= diff;
-	unit->stats.earth /= diff;
-	unit->stats.fire /= diff;
-	unit->stats.water /= diff;
+	diff = (float)sum / 100.f;
+	unit->stats.air = unit->stats.air / diff;
+	unit->stats.earth = unit->stats.earth / diff;
+	unit->stats.fire = unit->stats.fire / diff;
+	unit->stats.water = unit->stats.water / diff;
 }
