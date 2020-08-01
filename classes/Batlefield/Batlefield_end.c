@@ -15,6 +15,7 @@
 
 void	battlefield_end(t_battlefield *self)
 {
+	printf("\n[!!!] ");
 	if (self->dragons_counter == 0)
 	{
 		printf("Heroes win! There are only %d of them left.\n",
@@ -23,10 +24,11 @@ void	battlefield_end(t_battlefield *self)
 	else if (self->heroes_counter == 0)
 	{
 		printf("Dragons win! There are only %d of them left.\n",
-				self->heroes_counter);
+				self->dragons_counter);
 	}
 	else
 	{
-		printf("The battle dragged on.. There are %d dragons left, and %d heroes left.\n", self->dragons_counter, self->heroes_counter);
+		printf("The battle dragged on.. There are %d dragons left, and %d heroes left.\n",
+				self->dragons_counter, self->heroes_counter);
 	}
 }

@@ -16,11 +16,11 @@ void	berserk_damage(t_hero *self, t_dragon *dragon)
 {
 	if (self->stats.fire > dragon->stats.fire / 2)
 	{
-		dragon->hp -= 10;
+		dragon->hp -= 10 + (self->hp < 10 ? 4 : 0);
 	}
 	if (self->stats.earth + self->stats.air + self->stats.water / 2
 		> dragon->stats.air)
 	{
-		dragon->hp -= 3;
+		dragon->hp -= 3 + (self->hp < 10 ? 4 : 0);
 	}
 }

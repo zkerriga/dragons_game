@@ -11,8 +11,10 @@
 /* ************************************************************************** */
 
 #include "Dragon.h"
+#include <stdio.h>
 
 void	dragon_del(t_dragon *self)
 {
+//	printf("The dragon died!\n");
 	free_gc(self);
 }

@@ -22,7 +22,7 @@ t_list	*heroes_list_create(void)
 
 	heroes = ft_lstnew(warrior_new(10, 20, 50, 35, "Dragonborn"));
 	ft_lstadd_front(&heroes, ft_lstnew(warrior_new(90, 20, 3, 35, "Fireman")));
-	ft_lstadd_front(&heroes, ft_lstnew(berserk_new(80, 1, 2, 10, "Borris")));
+//	ft_lstadd_front(&heroes, ft_lstnew(berserk_new(80, 1, 2, 10, "Borris")));
 	printf("The heroes team is assembled!\n\n");
 	return (heroes);
 }
@@ -34,7 +34,7 @@ t_list	*dragons_list_create(void)
 	dragons = ft_lstnew(icedragon_new(1, 60, 20, 24));
 	ft_lstadd_front(&dragons, ft_lstnew(icedragon_new(10, 90, 1, 30)));
 	ft_lstadd_front(&dragons, ft_lstnew(firedragon_new(80, 1, 20, 1)));
-	ft_lstadd_front(&dragons, ft_lstnew(firedragon_new(10, 10, 78, 60)));
+//	ft_lstadd_front(&1dragons, ft_lstnew(firedragon_new(10, 10, 78, 60)));
 	printf("The dragon team is assembled!\n\n");
 	return (dragons);
 }

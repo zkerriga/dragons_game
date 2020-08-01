@@ -13,6 +13,26 @@
 #include "Batlefield.h"
 #include "stdio.h"
 
+static void	print_info(t_unit *unit1, t_unit *unit2, t_bool is_start)
+{
+	if (is_start)
+		printf("Battle: ");
+	else
+		printf("     -> ");
+	if (unit1)
+		printf("%s(%3d hp) vs ", (ft_memcmp("I'm a hero!",
+				unit1->slogan(unit1), 11) ? "dragon" : "hero"), unit1->hp);
+	else
+		printf("dead vs ");
+	if (unit2)
+		printf("%s(%3d hp)\n", (ft_memcmp("I'm a hero!",
+				unit2->slogan(unit2), 11) ? "dragon" : "hero"), unit2->hp);
+	else
+		printf("dead\n");
+	if (!is_start)
+		printf("\n");
+}
+
 static void	battle(t_battlefield *self, int i1, int i2)
 {
 	t_unit	*unit1;
@@ -20,7 +40,7 @@ static void	battle(t_battlefield *self, int i1, int i2)
 
 	unit1 = self->units_array[i1];
 	unit2 = self->units_array[i2];
-	printf("Battle: %s vs %s\n", unit1->slogan(unit1), unit2->slogan(unit2));
+	print_info(unit1, unit2, TRUE);
 	unit1->communicate(unit1, unit2);
 	if (unit2->hp < MIN_HP)
 	{
@@ -30,6 +50,7 @@ static void	battle(t_battlefield *self, int i1, int i2)
 			--self->heroes_counter;
 		unit2->del(unit2);
 		self->units_array[i2] = NULL;
+		print_info(self->units_array[i1], self->units_array[i2], FALSE);
 		return ;
 	}
 	unit2->communicate(unit2, unit1);
@@ -42,6 +63,7 @@ static void	battle(t_battlefield *self, int i1, int i2)
 		unit1->del(unit1);
 		self->units_array[i1] = NULL;
 	}
+	print_info(self->units_array[i1], self->units_array[i2], FALSE);
 }
 
 static void	find_units(t_battlefield *self, int *unit1, int *unit2)

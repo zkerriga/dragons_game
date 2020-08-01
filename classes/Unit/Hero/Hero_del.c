@@ -11,9 +11,11 @@
 /* ************************************************************************** */
 
 #include "Hero.h"
+#include <stdio.h>
 
 void	hero_del(t_hero *self)
 {
+//	printf("The hero %s died!\n", self->name);
 	free(self->name);
 	free_gc(self);
 }

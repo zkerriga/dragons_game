@@ -12,6 +12,7 @@
 
 #include "Batlefield.h"
 #include "Unit.h"
+#include <time.h>
 
 static void		init_array(t_battlefield *self, t_list *dragons, t_list *heroes)
 {
@@ -45,7 +46,7 @@ static void		shuffle_array(t_unit **array, int size)
 	int		counter;
 	t_unit	*for_swap;
 
-	srand(42);
+	srand(time(NULL));
 	counter = 0;
 	while (counter++ < size)
 	{

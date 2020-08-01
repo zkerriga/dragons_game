@@ -16,6 +16,6 @@
 const char	*dragon_slogan(t_dragon *self)
 {
 	const char	*slogan = "Arrrrrrrrrrrrrrrr!";
-	printf("%s", slogan);
+//	printf("%s\n", slogan);
 	return (slogan);
 }

@@ -16,6 +16,6 @@
 const char	*hero_slogan(t_hero *self)
 {
 	const char	*slogan = "I'm a hero!";
-	printf("%s My name is %s", slogan, self->name);
+//	printf("%s My name is %s\n", slogan, self->name);
 	return (slogan);
 }
