@@ -16,6 +16,7 @@
 # include "libft.h"
 
 # define MAX_HP 100
+# define MIN_HP 1
 
 typedef struct	s_stats
 {

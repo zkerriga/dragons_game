@@ -19,7 +19,7 @@
 
 void	hero_communicate(t_hero *self, t_unit *unit)
 {
-	if (ft_memcmp(unit->slogan(unit), "I'm a hero!", 12))
+	if (ft_memcmp(unit->slogan(unit), "I'm a hero!", 11))
 	{
 		self->heal(self, unit);
 	}

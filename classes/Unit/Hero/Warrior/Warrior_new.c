@@ -26,7 +26,11 @@ t_hero	*warrior_new(int fire, int water, int earth, int air, const char *name)
 	warrior->stats.water = water;
 	warrior->stats.earth = earth;
 	warrior->stats.air = air;
-	warrior->name = ft_strdup(name);
+	if (!(warrior->name = ft_strdup(name)))
+	{
+		free_gc(NULL);
+		exit(1);
+	}
 	unit_normalize(warrior);
 	warrior->del = hero_del;
 	warrior->slogan = hero_slogan;

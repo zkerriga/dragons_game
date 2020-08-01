@@ -15,8 +15,6 @@
 
 # include "Unit.h"
 
-typedef struct s_unit	t_unit;
-
 typedef struct	s_dragon
 {
 	int			hp;
@@ -30,5 +28,8 @@ typedef struct	s_dragon
 void			dragon_del(t_dragon *self);
 const char		*dragon_slogan(t_dragon *self);
 void			dragon_communicate(t_dragon *self, t_unit *unit);
+
+t_dragon		*icedragon_new(int fire, int water, int earth, int air);
+t_dragon		*firedragon_new(int fire, int water, int earth, int air);
 
 #endif

@@ -13,9 +13,24 @@
 #ifndef BATLEFIELD_H
 # define BATLEFIELD_H
 
-typedef struct	s_batlefield
-{
+# include "Unit.h"
 
-}				t_batlefield;
+# define LOOP_OUT 5000
+
+typedef struct	s_battlefield
+{
+	int			dragons_counter;
+	int			heroes_counter;
+	int			size;
+	t_unit		**units_array;
+	void		(*fight)(struct s_battlefield *self);
+	void		(*end)(struct s_battlefield *self);
+	void		(*del)(struct s_battlefield *self);
+}				t_battlefield;
+
+t_battlefield	*battlefield_new(t_list *dragons, t_list *heroes);
+void			battlefield_del(t_battlefield *self);
+void			battlefield_fight(t_battlefield *self);
+void			battlefield_end(t_battlefield *self);
 
 #endif

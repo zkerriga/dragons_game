@@ -14,5 +14,5 @@
 
 void	dragon_del(t_dragon *self)
 {
-	free(self);
+	free_gc(self);
 }

@@ -15,5 +15,5 @@
 void	hero_del(t_hero *self)
 {
 	free(self->name);
-	free(self);
+	free_gc(self);
 }

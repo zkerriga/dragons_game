@@ -26,7 +26,11 @@ t_hero	*berserk_new(int fire, int water, int earth, int air, const char *name)
 	berserk->stats.water = water;
 	berserk->stats.earth = earth;
 	berserk->stats.air = air;
-	berserk->name = ft_strdup(name);
+	if (!(berserk->name = ft_strdup(name)))
+	{
+		free_gc(NULL);
+		exit(1);
+	}
 	unit_normalize(berserk);
 	berserk->del = hero_del;
 	berserk->slogan = hero_slogan;
