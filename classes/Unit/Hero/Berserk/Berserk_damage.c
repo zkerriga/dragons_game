@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unit_normalize.c                                   :+:      :+:    :+:   */
+/*   Berserk_damage.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zkerriga <zkerriga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/31 11:35:44 by zkerriga          #+#    #+#             */
-/*   Updated: 2020/07/31 11:35:45 by zkerriga         ###   ########.fr       */
+/*   Created: 2020/08/01 09:50:01 by zkerriga          #+#    #+#             */
+/*   Updated: 2020/08/01 09:50:03 by zkerriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Unit.h"
+#include "Hero.h"
 
-void	unit_normalize(t_unit *unit)
+void	berserk_damage(t_hero *self, t_dragon *dragon)
 {
-	int	sum;
-	int	diff;
-
-	sum = unit->stats.air + unit->stats.earth + unit->stats.fire
-			+ unit->stats.water;
-	diff = sum / 100;
-	unit->stats.air /= diff;
-	unit->stats.earth /= diff;
-	unit->stats.fire /= diff;
-	unit->stats.water /= diff;
+	if (self->stats.fire > dragon->stats.fire / 2)
+	{
+		dragon->hp -= 10;
+	}
+	if (self->stats.earth + self->stats.air + self->stats.water / 2
+		> dragon->stats.air)
+	{
+		dragon->hp -= 3;
+	}
 }

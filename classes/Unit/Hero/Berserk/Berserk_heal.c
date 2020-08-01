@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unit_normalize.c                                   :+:      :+:    :+:   */
+/*   Berserk_heal.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zkerriga <zkerriga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/31 11:35:44 by zkerriga          #+#    #+#             */
-/*   Updated: 2020/07/31 11:35:45 by zkerriga         ###   ########.fr       */
+/*   Created: 2020/08/01 09:50:10 by zkerriga          #+#    #+#             */
+/*   Updated: 2020/08/01 09:50:11 by zkerriga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Unit.h"
+#include "Hero.h"
 
-void	unit_normalize(t_unit *unit)
+void	berserk_heal(t_hero *self, t_hero *bro)
 {
-	int	sum;
-	int	diff;
-
-	sum = unit->stats.air + unit->stats.earth + unit->stats.fire
-			+ unit->stats.water;
-	diff = sum / 100;
-	unit->stats.air /= diff;
-	unit->stats.earth /= diff;
-	unit->stats.fire /= diff;
-	unit->stats.water /= diff;
 }
