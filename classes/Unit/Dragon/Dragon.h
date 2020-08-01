@@ -29,5 +29,6 @@ typedef struct	s_dragon
 
 void			dragon_del(t_dragon *self);
 const char		*dragon_slogan(t_dragon *self);
+void			dragon_communicate(t_dragon *self, t_unit *unit);
 
 #endif
