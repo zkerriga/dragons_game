@@ -12,18 +12,26 @@
 
 #include "Hero.h"
 
-t_hero	*Warrior_new(int fire, int water, int earth, int air, const char *name)
+void	warrior_heal(t_hero *self, t_hero *bro);
+void	warrior_damage(t_hero *self, t_dragon *dragon);
+
+t_hero	*warrior_new(int fire, int water, int earth, int air, const char *name)
 {
 	t_hero	*warrior;
 
 	if (!(warrior = (t_hero *)malloc_gc(sizeof(t_hero))))
 		exit(1);
-	warrior->fire = fire;
-	warrior->water = water;
-	warrior->earth = earth;
-	warrior->air = air;
+	warrior->hp = MAX_HP;
+	warrior->stats.fire = fire;
+	warrior->stats.water = water;
+	warrior->stats.earth = earth;
+	warrior->stats.air = air;
 	warrior->name = ft_strdup(name);
 	unit_normalize(warrior);
 	warrior->del = hero_del;
+	warrior->slogan = hero_slogan;
+	warrior->communicate = hero_communicate;
+	warrior->heal = warrior_heal;
+	warrior->damage = warrior_damage;
 	return (warrior);
 }

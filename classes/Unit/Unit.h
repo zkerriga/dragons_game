@@ -15,13 +15,21 @@
 
 # include "libft.h"
 
-typedef struct	s_unit
+# define MAX_HP 100
+
+typedef struct	s_stats
 {
 	int			fire;
 	int			water;
 	int			earth;
 	int			air;
-	void		(*slogan)(struct s_unit *self);
+}				t_stats;
+
+typedef struct	s_unit
+{
+	int			hp;
+	t_stats		stats;
+	const char	*(*slogan)(struct s_unit *self);
 	void		(*communicate)(struct s_unit *self, struct s_unit *);
 	void		(*del)(struct s_unit *self);
 }				t_unit;
