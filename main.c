@@ -21,8 +21,8 @@ t_list	*heroes_list_create(void)
 	t_list	*heroes;
 
 	heroes = ft_lstnew(warrior_new(10, 20, 50, 35, "Dragonborn"));
-	ft_lstadd_front(&heroes, ft_lstnew(warrior_new(90, 20, 3, 35, "Fireman")));
-//	ft_lstadd_front(&heroes, ft_lstnew(berserk_new(80, 1, 2, 10, "Borris")));
+//	ft_lstadd_front(&heroes, ft_lstnew(warrior_new(90, 20, 3, 35, "Fireman")));
+	ft_lstadd_front(&heroes, ft_lstnew(berserk_new(80, 1, 2, 10, "Borris")));
 	printf("The heroes team is assembled!\n\n");
 	return (heroes);
 }

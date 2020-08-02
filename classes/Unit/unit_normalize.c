@@ -20,8 +20,8 @@ void	unit_normalize(t_unit *unit)
 	sum = unit->stats.air + unit->stats.earth + unit->stats.fire
 			+ unit->stats.water;
 	diff = (float)sum / 100.f;
-	unit->stats.air = unit->stats.air / diff;
-	unit->stats.earth = unit->stats.earth / diff;
-	unit->stats.fire = unit->stats.fire / diff;
-	unit->stats.water = unit->stats.water / diff;
+	unit->stats.air = (int)((float)unit->stats.air / diff);
+	unit->stats.earth = (int)((float)unit->stats.earth / diff);
+	unit->stats.fire = (int)((float)unit->stats.fire / diff);
+	unit->stats.water = (int)((float)unit->stats.water / diff);
 }

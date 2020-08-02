@@ -14,4 +14,5 @@
 
 void	berserk_heal(t_hero *self, t_hero *bro)
 {
+	if (self || bro) {}
 }

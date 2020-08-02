@@ -21,10 +21,10 @@ void	hero_communicate(t_hero *self, t_unit *unit)
 {
 	if (ft_memcmp(unit->slogan(unit), "I'm a hero!", 11))
 	{
-		self->damage(self, unit);
+		self->damage(self, (t_dragon *)unit);
 	}
 	else
 	{
-		self->heal(self, unit);
+		self->heal(self, (t_hero *)unit);
 	}
 }
