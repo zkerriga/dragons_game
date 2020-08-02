@@ -1,6 +1,11 @@
 # dragons_game
 A console mini-game that demonstrates the capabilities of <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented programming</a> in C.
 
+### Git:
+You <b>must</b> clone the repository with the recursive flag:
+
+`git clone https://github.com/zkerriga/dragons_game --recursive`
+
 ### Usage:
 Inside the `main.c` file, there are two functions that form a team of <b>dragons</b> and a team of <b>heroes</b>. The command can be typed from all available class constructors, passing the necessary characteristics for initialization.
 Run the `make` command at the root of the project. And then run the program itself: `./dragons_game`.
