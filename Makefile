@@ -119,3 +119,7 @@ re: fclean lib_fclean all
 .PHONY: lib_fclean
 lib_fclean:
 	@$(MAKE) -C ./$(LIB_DIR)/libft --no-print-directory fclean
+
+.PHONY: valg
+valg: $(NAME)
+	valgrind --leak-check=full --leak-resolution=med --track-origins=yes --vgdb=no ./$(NAME)
