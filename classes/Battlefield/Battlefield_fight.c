@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Batlefield.h"
+#include "Battlefield.h"
 #include "stdio.h"
 
 static void	print_info(t_unit *unit1, t_unit *unit2, t_bool is_start)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Batlefield.h"
+#include "Battlefield.h"
 #include "Unit.h"
 #include <time.h>
 

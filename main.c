@@ -13,7 +13,7 @@
 #include "libft.h"
 #include "Hero.h"
 #include "Dragon.h"
-#include "Batlefield.h"
+#include "Battlefield.h"
 #include <stdio.h>
 
 t_list	*heroes_list_create(void)

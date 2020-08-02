@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Batlefield.h"
+#include "Battlefield.h"
 
 static void	clear_array(t_unit **array, int size)
 {

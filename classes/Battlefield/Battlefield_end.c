@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Batlefield.h"
+#include "Battlefield.h"
 #include <stdio.h>
 
 void	battlefield_end(t_battlefield *self)
